@@ -1,0 +1,17 @@
+<h1>Counted</h1>
+
+<a href=" {% url 'home' %} ">Back to the Homepage</a>
+<br>
+<a href=" {% url 'about' %} ">Click Here to know about US</a>
+
+<h2>Your Text is </h2>
+{{ fulltext }}
+<br>
+<h2>Total Number of words in the text area is </h2> {{ words }}
+<br>
+<!-- Now we will define the loop in the HTMl File  -->
+
+{% for word,value in worddictionary %}
+{{ word }} = {{ value }}
+<br>
+{% endfor %}
